@@ -13,7 +13,9 @@ const UniInput = ({ type, name, label }: TInputProps) => {
       {label ? label : null}
       <Controller
         name={name}
-        render={({ field }) => <Input {...field} type={type} id={name} />}
+        render={({ field }) => (
+          <Input {...field} type={type} id={name} size="large" />
+        )}
       />
     </div>
   );
