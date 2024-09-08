@@ -16,8 +16,8 @@ const AcademicSemester = () => {
     useGetAllSemestersQuery(params);
   console.log("Semesters : ", allAcademicSemesters);
 
-  const tableData = allAcademicSemesters?.data?.data?.map(
-    ({ _id, name, startMonth, endMonth, year }: TTableData) => ({
+  const tableData = allAcademicSemesters?.data?.map(
+    ({ _id, name, startMonth, endMonth, year }) => ({
       key: _id,
       name,
       startMonth,

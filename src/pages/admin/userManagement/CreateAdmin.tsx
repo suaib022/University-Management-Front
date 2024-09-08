@@ -1,9 +1,7 @@
-import React from "react";
-
 const CreateAdmin = () => {
   return (
     <div>
-      <h2 className=" text-4xl font-semibold">Create Admin</h2>
+      <h1> This is CreateAdmin component </h1>
     </div>
   );
 };
