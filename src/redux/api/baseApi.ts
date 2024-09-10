@@ -32,7 +32,7 @@ const baseQueryWithRefreshToken: BaseQueryFn<
   let result = await baseQuery(args, api, extraOptions);
 
   if (result?.error?.status === 404) {
-    toast.error("User Not Found !", { duration: 2500 });
+    toast.error("User Not Found !!!", { duration: 2500 });
   }
 
   if (result?.error?.status === 401) {
@@ -62,6 +62,7 @@ const baseQueryWithRefreshToken: BaseQueryFn<
 export const baseApi = createApi({
   reducerPath: "baseApi",
   baseQuery: baseQueryWithRefreshToken,
+  tagTypes: ["semester", "courses"],
 
   endpoints: () => ({}),
 });
